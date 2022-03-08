@@ -1,7 +1,7 @@
 export default class GameLogic {
   constructor() {
     this.hits = 0;
-    this.misses = -1;
+    this.misses = 0;
   }
 
   renderField() {
@@ -49,13 +49,15 @@ export default class GameLogic {
       // eslint-disable-next-line no-alert
       alert('You win!');
       this.hits = 0;
-      this.misses = -1;
+      this.misses = 0;
+      this.renderCounter();
     }
     if (this.misses === 5) {
       // eslint-disable-next-line no-alert
       alert('You lose!');
       this.hits = 0;
-      this.misses = -1;
+      this.misses = 0;
+      this.renderCounter();
     }
   }
 
